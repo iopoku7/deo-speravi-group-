@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --fontfam: "Poppins", sans-serif;
+    --color: #001f52;
+    --color1: #16c5ff;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fontfam);
+}
+
+.navbar {
+    background-color: var(--color);
+    overflow: hidden;
+    text-align: center;
+    height: 50px;
+    position: relative;
+}
+
+.navbar-logo {
+    float: left;
+    padding: 15px;
+}
+
+.navbar-title {
+    color: white;
+    font-size: 24px;
+    line-height: 60px;
+    display: inline-block;
+    margin: 0;
+}
+
+.navbar-menu {
+    background-color: #000c35;
+    text-align: center;
+    font-weight: bold;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0;
+}
+
+.navbar-menu ul li {
+    display: inline-block; /* Adjusted to display horizontally */
+}
+
+.navbar-menu ul li a {
+    display: inline-block; /* Adjusted to display horizontally */
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-menu ul li a:hover {
+    background-color: var(--color);
+}
+
+.navbar-image {
+    float: right;
+    padding: 15px;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* Media Query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .navbar-title {
+        display: block;
+        line-height: 50px;
+        width: calc(100% - 100px);
+        font-size: 18px;
+    }
+
+   
+@media screen and (max-width: 600px) {
+    .navbar-menu {
+        display: flex;
+        position: static;
+        background-color: var(--color);
+        height: auto;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: left;
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+    }
+    
+    .navbar-menu ul {
+        display: flex;
+        padding: 0; 
+        margin: 0; 
+        list-style-type: none;
+    }
+
+    .navbar-menu ul li {
+        margin-right: 10px; 
+    }
+}
+
+
+    .navbar-logo{
+        display: none;
+    }
+
+}
+
+/* Media Query for screens wider than 600px */
+@media screen and (min-width: 601px) {
+    .navbar-menu {
+        position: static;
+    }
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* Ensure images don't overflow */
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+  }
+  
+  /* Text on images */
+  .text {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: var(--fontfam);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .text span{
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  /* Gradient overlay */
+  .overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    .mySlides img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover; /* Maintain aspect ratio and cover entire container */
+      }
+    .text {
+      font-size: 0.7rem; /* Adjusted font size for smaller screens */
+      max-width: 90%;
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+    .text span{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+  }
+  
+
+/* about */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.image img {
+    width: 100%;
+    height: 400px;
+    
+}
+
+.image:hover img {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #da042a;
+}
+
+.content p {
+    font-size: 17px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .image {
+        flex: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+
+    .content {
+        flex: none;
+        margin-left: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#fff
+}
+
+/* Specialists */
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.images {
+    width: calc(33.33% - 20px); /* Adjusted width for three columns with spacing */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+/* Specialist Name */
+.images h1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Specialist Role */
+.images p {
+    font-size: 1rem;
+    color:#fff;
+    margin-bottom: 10px;
+}
+
+/* Book Appointment Button */
+.images a {
+    display: inline-block;
+    background-color: #16c5ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.images a:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    /* Container */
+    .container {
+        max-width: 100%; /* Adjusted maximum width for smaller screens */
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+    
+    /* Title */
+    .title {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        margin-bottom: 15px; 
+        color: #fff;/* Adjusted margin for smaller screens */
+    }
+    
+    /* Specialists */
+    .services{
+        justify-content: center; 
+        align-content: initial;/* Centering specialists on smaller screens */
+    }
+    
+    /* Specialist Image */
+    .images {
+        width:100% ; /* Adjusted width for two columns with spacing */
+        margin-bottom: 15px;
+        display: inline-block;
+        /* Adjusted margin for smaller screens */
+    }
+    
+    /* Specialist Name */
+    .images h1 {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+        margin-top: 5px; /* Adjusted margin for smaller screens */
+        margin-bottom: 3px; /* Adjusted margin for smaller screens */
+    }
+    
+    /* Specialist Role */
+    .images p {
+        font-size: 0.9rem; /* Adjusted font size for smaller screens */
+        margin-bottom: 8px; /* Adjusted margin for smaller screens */
+    }
+    
+    /* Book Appointment Button */
+    .images a {
+        padding: 8px 15px; /* Adjusted padding for smaller screens */
+        font-size: 0.9rem; 
+    }
+}
+
+
+/* Gallery */
+
+.gallery{
+    padding: 1rem 7%;
+    margin-top: 0;
+    background-color: #e4e2e2;
+}
+
+.main-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.inner-gallery{
+    flex:1 1 300px;
+
+}
+.inner-gallery img{
+    width: 100%;
+    transition: .3s;
+}
+.inner-gallery img:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+    
+.footer__bar {
+    background-color:#000c35; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    text-align: center; /* Align text to the center */
+    padding: 10px 0; /* Add padding for better spacing */
+    font-size: 0.9rem; /* Font size for the text */
+}
+
+.footer__bar a {
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.footer__bar a:hover {
+    text-decoration: underline;
+}
+  
